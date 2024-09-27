@@ -3,11 +3,12 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion"; 
-import PriceTag from "../ImageComp/PriceTag";
-import Aim from "../ImageComp/Aim";
-import Clock from "../ImageComp/Clock";
-import Calendar from "../ImageComp/Calendar";
-import mainmain from "../../pages/MainPhotoReedu.svg";
+import mainmain from "../../assets/MainPhotoReedu.svg";
+import aim from "../../assets/aim2.svg"
+import clock from "../../assets/clock-square.svg"
+import calendar from "../../assets/calendar.svg"
+import pricetag from "../../assets/price-tag 1.svg"
+
 
 export default function AnimationDiv() {
   const [isHovered, setIsHovered] = useState(false); 
@@ -57,24 +58,24 @@ export default function AnimationDiv() {
       <section className={`flex justify-between pt-[72px] relative z-20 ${isHovered ? 'text-black' : 'text-white'}`}>
         <div className="flex gap-5">
           <div>
-            <Calendar width={30} height={30} />
+            <Image src={calendar} width={30} height={30}  alt="calendar"/>
             <h2 className="pt-[10px] text-[16px] leading-normal font">კურსის ხანგრძლივობა</h2>
             <h3 className="text-[12px] leading-normal font-medium">10 თვე</h3>
           </div>
           <div>
-            <Clock width={30} height={30} />
+            <Image src={clock} width={30} height={30} alt="clock" />
             <h2 className="pt-[10px] text-[16px] leading-normal font">შეხვედრების რაოდენობა</h2>
             <h3 className="text-[12px] leading-normal font-medium">100 შეხვედრა</h3>
           </div>
           <div>
-            <Aim width={30} height={30} />
+            <Image src={aim} width={30} height={30} alt="aim" />
             <h2 className="pt-[10px] text-[16px] leading-normal font">კურსის მიზანი</h2>
             <h3 className="w-[300px] text-[12px] leading-normal font-medium">
               კურსის მიზანია მსმენელი გახდეს junior full stack დეველოპერი{" "}
             </h3>
           </div>
           <div>
-            <PriceTag width={30} height={30} />
+            <Image src={pricetag} width={30} height={30} alt="prcetag" />
             <h2 className="pt-[10px] text-[16px] leading-normal font">საფასური</h2>
             <h3 className="text-[12px] leading-normal font-medium">700 ₾</h3>
           </div>
