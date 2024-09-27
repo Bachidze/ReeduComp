@@ -3,11 +3,10 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion"; 
 import mainmain from "../../assets/MainPhotoReedu.svg";
-import aim from "../../assets/aim2.svg"
-import clock from "../../assets/clock-square.svg"
-import calendar from "../../assets/calendar.svg"
-import pricetag from "../../assets/price-tag 1.svg"
-
+import aim from "../../assets/aim2.svg";
+import clock from "../../assets/clock-square.svg";
+import calendar from "../../assets/calendar.svg";
+import pricetag from "../../assets/price-tag 1.svg";
 
 export default function AnimationDiv() {
   const [isHovered, setIsHovered] = useState(false); 
@@ -18,14 +17,13 @@ export default function AnimationDiv() {
         className="absolute bottom-0"
         initial={{ scale: 1 }} 
         whileHover={{ scale: 2 }} 
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
         <motion.div 
-          className="w-0 h-0 cursor-pointer border-l-[100vw] border-l-transparent border-r-[100vw] border-r-transparent border-b-[20vh] hover:border-b-[220vh] "
+          className="w-0 h-0 cursor-pointer border-l-[100vw] border-l-transparent border-r-[100vw] border-r-transparent border-b-[20vh]  hover:border-b-[220vh] transition-all duration-1000"
         />
-   
       </motion.div>
       
       <section className={`flex justify-between relative z-20 ${isHovered ? 'text-black' : 'text-white'}`}>
@@ -54,30 +52,43 @@ export default function AnimationDiv() {
           <Image src={mainmain} width={568} height={300} alt="img" />
         </div>
       </section>
+      
       <section className={`flex justify-between pt-[72px] relative z-20 ${isHovered ? 'text-black' : 'text-white'}`}>
-        <div className="flex gap-5">
-          <div>
-            <Image src={calendar} width={30} height={30}  alt="calendar"/>
+        <div className={`flex gap-5 transition-transform duration-300 ${isHovered ? 'transform translate-y-[-20px]' : ''}`}>
+          <motion.div
+            whileHover={{  translateY: 20 }}
+            transition={{ duration: 0.3 }} 
+          >
+            <Image src={calendar} width={30} height={30} alt="calendar" />
             <h2 className="pt-[10px] text-[16px] leading-normal font">კურსის ხანგრძლივობა</h2>
             <h3 className="text-[12px] leading-normal font-medium">10 თვე</h3>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            whileHover={{  translateY: 20 }}
+            transition={{ duration: 0.3 }} 
+          >
             <Image src={clock} width={30} height={30} alt="clock" />
             <h2 className="pt-[10px] text-[16px] leading-normal font">შეხვედრების რაოდენობა</h2>
             <h3 className="text-[12px] leading-normal font-medium">100 შეხვედრა</h3>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            whileHover={{  translateY: 20 }}
+            transition={{ duration: 0.3 }} 
+          >
             <Image src={aim} width={30} height={30} alt="aim" />
             <h2 className="pt-[10px] text-[16px] leading-normal font">კურსის მიზანი</h2>
             <h3 className="w-[300px] text-[12px] leading-normal font-medium">
               კურსის მიზანია მსმენელი გახდეს junior full stack დეველოპერი{" "}
             </h3>
-          </div>
-          <div>
-            <Image src={pricetag} width={30} height={30} alt="prcetag" />
+          </motion.div>
+          <motion.div
+            whileHover={{  translateY: 20 }}
+            transition={{ duration: 0.3 }} 
+          >
+            <Image src={pricetag} width={30} height={30} alt="pricetag" />
             <h2 className="pt-[10px] text-[16px] leading-normal font">საფასური</h2>
             <h3 className="text-[12px] leading-normal font-medium">700 ₾</h3>
-          </div>
+          </motion.div>
         </div>
         <div className="pr-[82px] gap-5 flex flex-col">
           <h2 className="bg-[#91C6EA] py-2 px-4 rounded-[10px] w-[195px] text-[24px] leading-normal font-medium">დეტალურად</h2>

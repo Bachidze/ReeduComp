@@ -8,9 +8,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      clipPath: {
+        'custom-polygon': 'polygon(0% 99%, 73% 85%, 100% 52%, 99% 99%)',
       },
     },
   },
