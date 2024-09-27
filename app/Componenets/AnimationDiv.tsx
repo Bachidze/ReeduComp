@@ -78,17 +78,17 @@ export default function AnimationDiv() {
           </motion.div>
         </div>
         <div className="pr-[82px] gap-5 flex flex-col">
-          <h2 className="bg-[#91C6EA] py-2 px-4 rounded-[10px] w-[195px] text-[24px] leading-normal font-medium">დეტალურად</h2>
-          <h2 className="bg-[#91C6EA] py-2 px-4 rounded-[10px] text-[24px] leading-normal font-medium">მოითხოვე კონსულტაცია</h2>
+          <h2 className="bg-[#91C6EA] cursor-pointer py-2 px-4 rounded-[10px] w-[195px] text-[24px] leading-normal font-medium">დეტალურად</h2>
+          <h2 className="bg-[#91C6EA] cursor-pointer py-2 px-4 rounded-[10px] text-[24px] leading-normal font-medium">მოითხოვე კონსულტაცია</h2>
         </div>
       </section>
       <div 
-        className={`absolute bottom-0 left-0 w-full h-full transition-all duration-1000 ease-in-out z-10 ${isHovered ? 'clip-path-full' : 'clip-path-initial'}`}
+        className={`absolute bottom-0 left-0  w-full h-full transition-all duration-1000 ease-in-out z-10 ${isHovered ? 'clip-path-full' : 'clip-path-initial'}`}
         style={{
           backgroundColor: 'white',
           clipPath: isHovered
             ? 'polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%)'
-            : 'polygon(0% 99%, 67% 78%, 100% 52%, 99% 99%)',
+            : 'polygon(15% 100%, 83% 82%, 100% 52%, 100% 100%)',
         }}
       />
     </main>
